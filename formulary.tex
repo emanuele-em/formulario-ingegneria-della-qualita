@@ -131,10 +131,6 @@ M &= \phi\left(-K\sqrt{\frac{n}{n-1}}\right)
 
 \mysection{CARTE DI CONTROLLO PER VARIABILI}
 
-\begin{align*}
-    TN=6\sigma_p
-\end{align*}
-
 \subsection*{Carta \(\mathbf{X-R}\)}
 
 \begin{align*}
@@ -173,55 +169,99 @@ M &= \phi\left(-K\sqrt{\frac{n}{n-1}}\right)
     LC_X&=\mu_X\pm L\sigma_X\\
     LC_R&=\mu_R\pm L\sigma_R\\
 \end{align*}
-\vfill\null
-\columnbreak
-
-\mysection{CARTE DI CONTROLLO PER ATTRIBUTI}
 
 \begin{center}
     \begin{tabularx}{\linewidth}{r X}
-        \(\beta\) & Probabilitá di non identificare la deriva al campionamento successivo\\
+        \(TN \)       & \(6\sigma_p\)\\
+        \(\beta\) & Probabilitá di \textit{non} identificare un fuori controllo\\
+        \(1-\beta^i\) & Probabilitá di identificare un fuori controllo entro l'i-esimo campionamento\\
         \(ARL\) & \(\frac{1}{1-\beta}\) numero medio di campioni prima di rilevare un fuori controllo\\
         \(ARL_0\) & \(\frac{1}{\alpha}\) ogni quanti campioni mi aspetto un falso fuori controllo\\
         \(ATS\) & \(ARL \times h\) tempo che passa prima del verificarsi di un fuori controllo\\
     \end{tabularx}
 \end{center}
+\vfill\null
+\columnbreak
 
+\mysection{CARTE DI CONTROLLO PER ATTRIBUTI}
 \subsection*{Carta \(\mathbf{p}\)}
-
+Binomiale
 \begin{align*}
-    LC &= \overline{p} \pm L\sqrt{\frac{\overline{p}(1-\overline{p})}{n}}\\
     \widehat{p} &= \frac{difettosi}{n}\\
-    \overline{p}&=\frac{\sum \widehat{p}}{k}
+    \overline{p}&=\frac{\sum \widehat{p}}{k}\\
+    LC &= \overline{p} \pm L\sqrt{\frac{\overline{p}(1-\overline{p})}{n}}   
 \end{align*}
 
 \subsection*{Carta \(\mathbf{np}\)}
-
+Binomiale
 \begin{align*}
     LC &= n\overline{p} \pm L\sqrt{n\overline{p}(1-\overline{p})}
 \end{align*}
 
 \subsection*{Carta \(\mathbf{c}\)}
-
+Poisson
 \begin{align*}
-    LC &= \overline{c} \pm L\sqrt{\overline{c}}\\
-    \overline{c}&=\frac{\sum Difetti}{k}
+    \overline{c}&=\frac{\sum Difetti}{k}\\
+    LC &= \overline{c} \pm L\sqrt{\overline{c}}    
 \end{align*}
 
 \subsection*{Carta \(\mathbf{u}\)}
-
+Poisson
 \begin{align*}
-    LC &= \overline{u} \pm L\sqrt{\frac{\overline{u}}{n}}\\
     \widehat{u} &= \frac{difetti}{n}\\
-    \overline{u}&=\frac{\sum \widehat{u}}{k}
+    \overline{u}&=\frac{\sum \widehat{u}}{k}\\
+    LC &= \overline{u} \pm L\sqrt{\frac{\overline{u}}{n}}    
 \end{align*}
+
+\mysection{DISTRIBUZIONI}
+
+\begin{center}
+    \begin{tabularx}{\linewidth}{c X}
+        \(N\)             & Numero di elementi nel lotto\\
+        \(m\)             & Numero di elementi difettosi nel lotto\\
+        \(p=\frac{m}{N}\) & Percentuali di elementi difettosi nel lotto\\
+        \(n\)             & Numerositá del campione estratto dal lotto\\
+        \(c\)             & Numero massimo di elementi difettosi che possono essere presenti nel campione, numero di accettazione\\
+        \(\lambda\)       & \(np\)\\
+    \end{tabularx}
+\end{center}
+
+\subsection*{Ipergeometrica}
+\begin{equation*}
+    P_a(N,n,c,p)=\sum_{i=0}^c\frac{\binom{N-Np}{n-i} \binom{Np}{i}}{\binom{N}{n}}
+\end{equation*}
+
+\subsection*{Binomiale}
+Carta \textit{p} e carta \textit{np}
+\begin{equation*}
+    P_a(n,c,p)=\sum_{i=0}^c\binom{n}{i}p^i(1-p)^{n-i}
+\end{equation*}
+
+\subsection*{Poisson}
+Carta \textit{c} e carta \textit{u}
+\begin{equation*}
+    P_a(\lambda, c)=\sum_{i=0}^c\frac{\lambda^ie^{-\lambda}}{i!}
+\end{equation*}
+
+\subsection*{Approssimazioni}
+\begin{center}
+    \begin{tabular}{|c|c|}
+        \hline
+        \(N>10n\) & Ipergeometrica \(\rightarrow\) Binomiale\\\hline
+        \(p>0.1\) & Binomiale \(\rightarrow\) Poisson\\\hline
+        \(np \geq 5 \land  0.1<p<1\) & Binomiale \(\rightarrow\) Poisson\\\hline
+        \(np > 5 \land np(1-p)>5\) & Binomiale \(\rightarrow\) Normale\\\hline
+        \(\lambda > 10\) & Poisson \(\rightarrow\) Normale\\\hline
+    \end{tabular}
+\end{center}
 
 \vfill\null
 \columnbreak
 
 \mysection{TEST MEDIA}
 \begin{align*}
-    \overline{x}&=\frac{\sum_ ix_i}{n}
+    \overline{x}&=\frac{\sum_ ix_i}{n}\\
+    S&=\sqrt{\frac{(x_i-\overline{x})^2}{n-1}}
 \end{align*}
 
 \subsection*{\(\mathbf{\sigma}\) nota - Test Normale}
@@ -248,7 +288,6 @@ M &= \phi\left(-K\sqrt{\frac{n}{n-1}}\right)
 
 \subsubsection*{\(\mathbf{H_0:\mu=\mu_0}\)}
 \begin{align*}
-    S&=\sqrt{\frac{(x_i-x)^2}{n-1}}\\
     T_{sp}&=\frac{\overline{x}-\mu_0}{\frac{S}{\sqrt{n}}}    
 \end{align*}
 \begin{equation*}
@@ -297,6 +336,7 @@ M &= \phi\left(-K\sqrt{\frac{n}{n-1}}\right)
 \begin{equation*}
     F_{A;B;1-\alpha}=\frac{1}{F_{B;A;\alpha}}
 \end{equation*}
+
 \vfill\null
 \columnbreak
 
@@ -379,12 +419,28 @@ M &= \phi\left(-K\sqrt{\frac{n}{n-1}}\right)
    \rightarrow \Delta A&=-A\frac{\Delta B}{B} \rightarrow\\
 \end{align*}
 
-\subsection*{Compensazione}
+\subsection*{Monotonia}
 \begin{align*}
     \frac{\partial I}{\partial A} &\geq 0
 \end{align*}
 \vfill\null
 \columnbreak
+
+\mysection{INDICI DI CAPACITÁ}
+
+\subsection*{Indice \(\mathbf{C_p}\)}
+
+\begin{align*}
+    C_p&=\frac{LSS-LSI}{6\sigma_p} \boxed{> 1.33}
+\end{align*}
+
+\subsection*{Indice \(\mathbf{C_p}\)}
+
+\begin{align*}
+    C_{pi}&=\frac{\mu-LSI}{3\sigma_p} \boxed{> 1.25}\\
+    C_{ps}&=\frac{LSS-\mu}{3\sigma_p} \boxed{> 1.25}\\
+    C_{pk}&=min(C_{pi},C_{ps}) \boxed{> 1.33}
+\end{align*}
 
 \mysection{GEOMETRIA}
 
@@ -457,8 +513,8 @@ M &= \phi\left(-K\sqrt{\frac{n}{n-1}}\right)
 \end{minipage}
 \begin{minipage}[m]{.45\linewidth}
     \begin{align*}
-        i_{R_1} &= i\frac{R_2}{R_1+R_2}\\
-        i_{R_2} &= i\frac{R_1}{R_1+R_2}
+        i_1 &= i_s\frac{R_2}{R_1+R_2}\\
+        i_2 &= i_s\frac{R_1}{R_1+R_2}
     \end{align*}
 \end{minipage}
 
@@ -472,8 +528,8 @@ M &= \phi\left(-K\sqrt{\frac{n}{n-1}}\right)
 \end{minipage}
 \begin{minipage}[m]{.45\linewidth}
     \begin{align*}
-        V_{R_1} &= V\frac{R_1}{R_1+R_2}\\
-        V_{R_2} &= V\frac{R_2}{R_1+R_2}
+        V_1 &= V_s\frac{R_1}{R_1+R_2}\\
+        V_2 &= V_s\frac{R_2}{R_1+R_2}
     \end{align*}
 \end{minipage}
 

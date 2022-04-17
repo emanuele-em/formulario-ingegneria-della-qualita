@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1650121256 "c:/Users/miche/MEGA/polito/magistrale/IQ/formulario-ingegneria-della-qualita/formulary.tex" "formulary.pdf" "formulary" 1650121260
-  "c:/Users/miche/MEGA/polito/magistrale/IQ/formulario-ingegneria-della-qualita/formulary.tex" 1650121254 15292 413bf719c28d5314cbf04b2cf31b7793 ""
+["pdflatex"] 1650187881 "c:/Users/miche/MEGA/polito/magistrale/IQ/formulario-ingegneria-della-qualita/formulary.tex" "formulary.pdf" "formulary" 1650187885
+  "c:/Users/miche/MEGA/polito/magistrale/IQ/formulario-ingegneria-della-qualita/formulary.tex" 1650187880 17342 67793ebfa532119ee72e033e55c5c5c9 ""
   "c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1646158467 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1646158467 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1646159186 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -11,6 +11,7 @@
   "c:/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/ecsx0800.tfm" 1646158940 3584 249e17f732ef0417cd23c68109f6bc4c ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/ecsx1000.tfm" 1646158940 3584 d90cef44d3336212c1284055d79d7513 ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/ecsx1095.tfm" 1646158940 3584 380f45aff25ba25cf53bd1991ce4247b ""
+  "c:/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/ecti0800.tfm" 1646158940 3072 828ba0ea87cf5b727c4bfd6367195ec2 ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/tcrm0800.tfm" 1646158940 1536 05df9db6aeccc4eea94fec15c9024f79 ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1646158077 1004 54797486969f23fa377b128694d548df ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1646158077 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -46,6 +47,7 @@
   "c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfsx0800.pfb" 1646158468 151158 f92315ca710dfd59dae90641f694ef82 ""
   "c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfsx1000.pfb" 1646158468 149078 529fb70b4eae6159fa47b6d68887e5ed ""
   "c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb" 1646158468 145807 be8f0482fbcef3edc94ae8b508d5160a ""
+  "c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb" 1646158468 187625 dd608ec2036f04ca9db473ad88d8ac35 ""
   "c:/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1646160111 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "c:/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty" 1646159416 7237 bdd120a32c8fdb4b433cf9ca2e7cd98a ""
   "c:/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty" 1646159416 1057 525c2192b5febbd8c1f662c9468335bb ""
@@ -156,11 +158,11 @@
   "c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1646182685 4448422 1ce8db434ffa4259b75148f2b12051ea ""
   "c:/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1646182953 2797719 3a0e7e1142a0bf624eeb86a2baad4a89 ""
   "c:/texlive/2021/texmf.cnf" 1646161515 713 614551405fc44b98efbf516466e3c909 ""
-  "formulary.aux" 1650121259 68 cf4a6b6a53489f052e697fc1c3e741c2 "pdflatex"
-  "formulary.tex" 1650121254 15292 413bf719c28d5314cbf04b2cf31b7793 ""
+  "formulary.aux" 1650187884 68 cf4a6b6a53489f052e697fc1c3e741c2 "pdflatex"
+  "formulary.tex" 1650187880 17342 67793ebfa532119ee72e033e55c5c5c9 ""
   "images/parallelo.png" 1650105272 7324 47bfccfca996845aec335a724d8fe929 ""
   "images/partitore_corrente.jpg" 1650105493 15010 7e99b340c82fc6a0d4ffaef7f9204da8 ""
-  "images/partitore_tensione.jpg" 1650105628 21487 8510bff2903cfe3725e55f864e8fe888 ""
+  "images/partitore_tensione.jpg" 1650183890 35439 0ec4cb95620b8cab5ac6a6b9bce9060e ""
   "images/serie.png" 1650105263 7191 a5acb92c39f29ab9fbe4c4f02a2cba7a ""
   "images/triangolo_rettangolo.png" 1650102422 3476 7837bcc1b46cc9fc5a26f1d81ab394e5 ""
   (generated)

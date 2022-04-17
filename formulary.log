@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.3.2)  16 APR 2022 17:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.3.2)  17 APR 2022 11:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -637,96 +637,106 @@ Overfull \hbox (8.0pt too wide) in paragraph at lines 132--132
  []
 
 
-Overfull \hbox (8.0pt too wide) in paragraph at lines 179--179
+Overfull \hbox (8.0pt too wide) in paragraph at lines 186--186
 [][][][][][][]  
  []
 
 [1
 
 {c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (8.0pt too wide) in paragraph at lines 222--222
+Overfull \hbox (8.0pt too wide) in paragraph at lines 216--216
 [][][][][][][]  
  []
 
 
-Overfull \hbox (8.0pt too wide) in paragraph at lines 276--276
+Overfull \hbox (8.0pt too wide) in paragraph at lines 261--261
 [][][][][][][]  
  []
 
 [2]
-Overfull \hbox (8.0pt too wide) in paragraph at lines 303--303
+Overfull \hbox (8.0pt too wide) in paragraph at lines 315--315
 [][][][][][][]  
  []
 
 
-Overfull \hbox (8.0pt too wide) in paragraph at lines 310--310
+Overfull \hbox (8.0pt too wide) in paragraph at lines 343--343
 [][][][][][][]  
  []
 
 
-Overfull \hbox (8.0pt too wide) in paragraph at lines 360--360
+Overfull \hbox (8.0pt too wide) in paragraph at lines 350--350
 [][][][][][][]  
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 370--370
+Overfull \hbox (8.0pt too wide) in paragraph at lines 400--400
+[][][][][][][]  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 410--410
 []|\T1/cmr/m/n/8 massa, tem-per-atura in
  []
 
 
-Overfull \hbox (8.0pt too wide) in paragraph at lines 389--389
+Overfull \hbox (8.0pt too wide) in paragraph at lines 429--429
 [][][][][][][]  
  []
 
-<images/triangolo_rettangolo.png, id=28, 338.26375pt x 287.0725pt>
+[3]
+Overfull \hbox (8.0pt too wide) in paragraph at lines 445--445
+[][][][][][][]  
+ []
+
+<images/triangolo_rettangolo.png, id=36, 338.26375pt x 287.0725pt>
 File: images/triangolo_rettangolo.png Graphic file (type png)
 <use images/triangolo_rettangolo.png>
-Package pdftex.def Info: images/triangolo_rettangolo.png  used on input line 396.
+Package pdftex.def Info: images/triangolo_rettangolo.png  used on input line 452.
 (pdftex.def)             Requested size: 61.61293pt x 52.28844pt.
-[3]
-Overfull \hbox (8.0pt too wide) in paragraph at lines 420--420
+
+Overfull \hbox (8.0pt too wide) in paragraph at lines 476--476
 [][][][][][][]  
  []
 
-<images/parallelo.png, id=36, 604.2575pt x 355.3275pt>
+<images/parallelo.png, id=37, 604.2575pt x 355.3275pt>
 File: images/parallelo.png Graphic file (type png)
 <use images/parallelo.png>
-Package pdftex.def Info: images/parallelo.png  used on input line 427.
+Package pdftex.def Info: images/parallelo.png  used on input line 483.
 (pdftex.def)             Requested size: 98.58105pt x 57.96503pt.
 
-Overfull \hbox (6.22667pt too wide) detected at line 433
+Overfull \hbox (6.22667pt too wide) detected at line 489
 \OML/cmm/m/it/8 R[] \OT1/cmr/m/n/8 = [][] = []
  []
 
-<images/serie.png, id=38, 782.925pt x 212.795pt>
+<images/serie.png, id=39, 782.925pt x 212.795pt>
 File: images/serie.png Graphic file (type png)
 <use images/serie.png>
-Package pdftex.def Info: images/serie.png  used on input line 441.
+Package pdftex.def Info: images/serie.png  used on input line 497.
 (pdftex.def)             Requested size: 98.58105pt x 26.79088pt.
-<images/partitore_corrente.jpg, id=39, 172.39406pt x 113.67468pt>
+<images/partitore_corrente.jpg, id=40, 172.39406pt x 113.67468pt>
 File: images/partitore_corrente.jpg Graphic file (type jpg)
 <use images/partitore_corrente.jpg>
-Package pdftex.def Info: images/partitore_corrente.jpg  used on input line 455.
+Package pdftex.def Info: images/partitore_corrente.jpg  used on input line 511.
 (pdftex.def)             Requested size: 98.58105pt x 65.00337pt.
-<images/partitore_tensione.jpg, id=40, 161.10187pt x 268.00125pt>
+<images/partitore_tensione.jpg, id=41, 161.10187pt x 268.00125pt>
 File: images/partitore_tensione.jpg Graphic file (type jpg)
 <use images/partitore_tensione.jpg>
-Package pdftex.def Info: images/partitore_tensione.jpg  used on input line 470.
+Package pdftex.def Info: images/partitore_tensione.jpg  used on input line 526.
 (pdftex.def)             Requested size: 49.28958pt x 81.99583pt.
 [4 <./images/triangolo_rettangolo.png> <./images/parallelo.png> <./images/serie.png> <./images/partitore_corrente.jpg> <./images/partitore_tensione.jpg>] (./formulary.aux) ) 
 Here is how much of TeX's memory you used:
- 17453 strings out of 478276
- 361411 string characters out of 5850490
- 789128 words of memory out of 5000000
- 35372 multiletter control sequences out of 15000+600000
- 479235 words of font info for 51 fonts, out of 8000000 for 9000
+ 17463 strings out of 478276
+ 361656 string characters out of 5850490
+ 791128 words of memory out of 5000000
+ 35381 multiletter control sequences out of 15000+600000
+ 479921 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  110i,24n,106p,10705b,885s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfsx0800.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfsx1000.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb>
-Output written on formulary.pdf (4 pages, 309090 bytes).
+{c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfsx0800.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfsx1000.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb>
+Output written on formulary.pdf (4 pages, 344717 bytes).
 PDF statistics:
- 139 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
+ 144 PDF objects out of 1000 (max. 8388607)
+ 84 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  38 words of extra memory for PDF output out of 10000 (max. 10000000)
 
