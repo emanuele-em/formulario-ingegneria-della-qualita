@@ -38,98 +38,8 @@
 \begin{document}
 
 \begin{multicols*}{2}
-\mysection{PIANI DI CAMPIONAMENTO PER VARIABILI}
-\begin{align*}
-n&=\left(\frac{Z_\alpha+Z_\beta}{Z_{AQL}+Z_{LTPD}}\right)^2\overbracket{\boxed{\left(1+\frac{K^2}{2}\right)}}^{\text{se \(\sigma\) non nota}}\\
-K&=\frac{-\left(Z_\alpha Z_{LPTD} + Z_\beta Z_{AQL}\right)}{Z_\alpha+z_\beta}\\
-Z_{LSI} &= \frac{\overline{x}-LSI}{\sigma}\\
-P_a &= \phi \Bigg(\frac{\sqrt{n}(K + Z_p)}{{\underbracket{\boxed{\sqrt{1+\frac{k^2}{2}}}}_{\text{se \(\sigma\) non nota}}}}\Bigg)
-\end{align*}
 
-\subsection*{Metodo K}
-\begin{equation*}
-    \boxed{ Z_{LSI} \geq K } 
-\end{equation*}
-
-\subsection*{Metodo M}
-\begin{align*}
-Q_{LSI} &= Z_{LSI}\sqrt{\frac{n}{n-1}} \\
-\widehat{p} &=  \phi \left(-Q_{LSI}\right)\\
-M &= \phi\left(-K\sqrt{\frac{n}{n-1}}\right)
-\end{align*}
-\begin{equation*}
-    \boxed{\widehat{p} < M}
-\end{equation*}
-\vfill\null
-\columnbreak
-
-\mysection{PIANI DI CAMPIONAMENTO PER ATTRIBUTI}
-\begin{center}
-    \begin{tabularx}{\linewidth}{r X}
-        \(\alpha\) & Rischio del fornitore\\
-        \(\beta\) & Rischio del committente\\
-        \(AQL\) & Valore limite di difettositá al di sopra del quale il fornitore è disposto a vedersi rifiutare il lotto con rischio \(\alpha\)\\
-        \(LTPD\) & Valore limite di difettositá al di sotto del quale il committente accetta il lotto con rischio \(\beta\)\\
-        \(AOQ\) & difettositá media in uscita\\
-        \(AOQL\) & difettositá massima in uscita\\
-        \(ATI\) & Average Total Inspection, numero medio di controlli totali\\
-    \end{tabularx}
-\end{center}
-\begin{align*}
-    &\begin{cases}
-        1-\alpha = \sum_{i=0}^c\binom{n}{i}AQL^i(1-AQL)^{n-i}\\
-        \beta = \sum_{i=0}^c\binom{n}{i}LTPD^i(1-LTPD)^{n-i}\\
-    \end{cases}\\
-    P_a &= \sum_{i=1}^c\binom{n}{i}p^i(1-p)^{n-i}\\
-\end{align*}
-
-\subsection*{Piano Singolo}
-
-\begin{center}
-    \begin{tabular}{ |c|c|c| }
-        \hline
-              & sostituzione & no sostituzione\\  \hline
-        ATI & \multicolumn{2}{c|}{\(P_an+(1-P_a)N\)}\\  \hline
-        AOQ & \(\frac{P_a p(N-n)}{N}\) & \(\frac{P_a p(N-n)}{N - p(ATI)}\)  \\ \hline
-        AOQL & \multicolumn{2}{c|}{\( \frac{\partial AOQ}{\partial p}=0 \rightarrow \text{calcolato con \(p_{max}\)}\)}\\ \hline  
-    \end{tabular}
-\end{center}
-
-\subsection*{Piano Doppio}
-\begin{center}
-    \begin{tabular}{|c|c|c|}
-        \hline
-               & sostituzione & no sostituzione\\  \hline
-          ATI  & \multicolumn{2}{c|}{\( n_1P_I+(n_1+n_2)P_{II}+N(1-P_I-P_{II}) \)}\\  \hline
-          AOQ  & \( \frac{P_Ip(N-n_1)+P_{II}p(N-n_1-n_2)}{N}\) & \( \frac{P_Ip(N-n_1)+P_{II}p(N-n_1-n_2)}{N - p(ATI)}\) \\ \hline
-          AOQL & \multicolumn{2}{c|}{\( \frac{\partial AOQ}{\partial p}=0 \rightarrow \text{calcolato con \(p_{max}\)}\)}\\ \hline
-          ASN  &\multicolumn{2}{c|}{\( n_1P_I+(n_1+n_2)(1-P_I) \)}\\ 
-        \hline  
-    \end{tabular}
-\end{center}
-
-\subsection*{Piano A Catena}
-\begin{center}
-    \begin{tabularx}{\linewidth}{r X}
-        \(P(0,n)\) & Probabilitá di avere 1 difettoso\\
-        \(P(1,n)\) & Probabilitá di avere 0 difettosi\\
-    \end{tabularx}
-\end{center}
-\begin{align*}
-    P_a = P(0,n) + P(1,n)P(0,n)^i
-\end{align*}
-
-\subsection*{Errori di ispezione}
-\begin{align*}
-    p_e &= (1-p)e_1+p(1-e_2)\\
-    p_a(p_e)&=p_{eA}-ATI'=\\
-            &=\sum \left[n+(1-p_{eA})(N-n)\right]p_{eA}^i=\\
-            &=\frac{n+(1-p_{eA})(N-n)}{1-p_{eA}}
-\end{align*}
-\vfill\null
-\columnbreak
-
-\mysection{CARTE DI CONTROLLO PER VARIABILI}
+    \mysection{CARTE DI CONTROLLO PER VARIABILI}
 
 \subsection*{Carta \(\mathbf{X-R}\)}
 
@@ -258,6 +168,90 @@ Carta \textit{c} e carta \textit{u}
 \vfill\null
 \columnbreak
 
+\mysection{PIANI DI CAMPIONAMENTO PER VARIABILI}
+\begin{align*}
+n&=\left(\frac{Z_\alpha+Z_\beta}{Z_{AQL}+Z_{LTPD}}\right)^2\overbracket{\boxed{\left(1+\frac{K^2}{2}\right)}}^{\text{se \(\sigma\) non nota}}\\
+K&=\frac{-\left(Z_\alpha Z_{LPTD} + Z_\beta Z_{AQL}\right)}{Z_\alpha+z_\beta}\\
+Z_{LSI} &= \frac{\overline{x}-LSI}{\sigma}\\
+P_a &= \phi \Bigg(\frac{\sqrt{n}(K + Z_p)}{{\underbracket{\boxed{\sqrt{1+\frac{k^2}{2}}}}_{\text{se \(\sigma\) non nota}}}}\Bigg)
+\end{align*}
+
+\subsection*{Metodo K}
+\begin{equation*}
+    \boxed{ Z_{LSI} \geq K } 
+\end{equation*}
+
+\subsection*{Metodo M}
+\begin{align*}
+Q_{LSI} &= Z_{LSI}\sqrt{\frac{n}{n-1}} \\
+\widehat{p} &=  \phi \left(-Q_{LSI}\right)\\
+M &= \phi\left(-K\sqrt{\frac{n}{n-1}}\right)
+\end{align*}
+\begin{equation*}
+    \boxed{\widehat{p} < M}
+\end{equation*}
+\vfill\null
+\columnbreak
+
+\mysection{PIANI DI CAMPIONAMENTO PER ATTRIBUTI}
+\begin{center}
+    \begin{tabularx}{\linewidth}{r X}
+        \(\alpha\) & Rischio del fornitore\\
+        \(\beta\) & Rischio del committente\\
+        \(AQL\) & Valore limite di difettositá al di sopra del quale il fornitore è disposto a vedersi rifiutare il lotto con rischio \(\alpha\)\\
+        \(LTPD\) & Valore limite di difettositá al di sotto del quale il committente accetta il lotto con rischio \(\beta\)\\
+        \(AOQ\) & difettositá media in uscita\\
+        \(AOQL\) & difettositá massima in uscita\\
+        \(ATI\) & Average Total Inspection, numero medio di controlli totali\\
+    \end{tabularx}
+\end{center}
+\begin{align*}
+    &\begin{cases}
+        1-\alpha = \sum_{i=0}^c\binom{n}{i}AQL^i(1-AQL)^{n-i}\\
+        \beta = \sum_{i=0}^c\binom{n}{i}LTPD^i(1-LTPD)^{n-i}\\
+    \end{cases}\\
+    P_a &= \sum_{i=1}^c\binom{n}{i}p^i(1-p)^{n-i}\\
+\end{align*}
+
+\subsection*{Piano Singolo}
+
+\begin{center}
+    \begin{tabular}{ |c|c|c| }
+        \hline
+              & sostituzione & no sostituzione\\  \hline
+        ATI & \multicolumn{2}{c|}{\(P_an+(1-P_a)N\)}\\  \hline
+        AOQ & \(\frac{P_a p(N-n)}{N}\) & \(\frac{P_a p(N-n)}{N - p(ATI)}\)  \\ \hline
+        AOQL & \multicolumn{2}{c|}{\( \frac{\partial AOQ}{\partial p}=0 \rightarrow \text{calcolato con \(p_{max}\)}\)}\\ \hline  
+    \end{tabular}
+\end{center}
+
+\subsection*{Piano Doppio}
+\begin{center}
+    \begin{tabular}{|c|c|c|}
+        \hline
+               & sostituzione & no sostituzione\\  \hline
+          ATI  & \multicolumn{2}{c|}{\( n_1P_I+(n_1+n_2)P_{II}+N(1-P_I-P_{II}) \)}\\  \hline
+          AOQ  & \( \frac{P_Ip(N-n_1)+P_{II}p(N-n_1-n_2)}{N}\) & \( \frac{P_Ip(N-n_1)+P_{II}p(N-n_1-n_2)}{N - p(ATI)}\) \\ \hline
+          AOQL & \multicolumn{2}{c|}{\( \frac{\partial AOQ}{\partial p}=0 \rightarrow \text{calcolato con \(p_{max}\)}\)}\\ \hline
+          ASN  &\multicolumn{2}{c|}{\( n_1P_I+(n_1+n_2)(1-P_I) \)}\\ 
+        \hline  
+    \end{tabular}
+\end{center}
+
+\subsection*{Piano A Catena}
+\begin{center}
+    \begin{tabularx}{\linewidth}{r X}
+        \(P(0,n)\) & Probabilitá di avere 1 difettoso\\
+        \(P(1,n)\) & Probabilitá di avere 0 difettosi\\
+    \end{tabularx}
+\end{center}
+\begin{align*}
+    P_a = P(0,n) + P(1,n)P(0,n)^i
+\end{align*}
+
+\vfill\null
+\columnbreak
+
 \mysection{TEST MEDIA}
 \begin{align*}
     \overline{x}&=\frac{\sum_ ix_i}{n}\\
@@ -340,11 +334,14 @@ Carta \textit{c} e carta \textit{u}
 \vfill\null
 \columnbreak
 
-\mysection{DIFETTOSITÁ REALE E APPARENTE}
+\mysection{ERRORI DI ISPEZIONE}
 
 \begin{align*}
     p_{reale} &= p_{apparente} - \text{falsi difettosi} + \text{falsi buoni}\\
-              &= p_{apparente} - (1-p_{reale})\alpha + p_{reale}\beta
+              &= p_{apparente} - (1-p_{reale})\alpha + p_{reale}\beta\\
+    p_a(p_{apparente})&=p_{eA}-ATI'=\\
+            &=\sum \left[n+(1-p_{eA})(N-n)\right]p_{eA}^i=\\
+            &=\frac{n+(1-p_{eA})(N-n)}{1-p_{eA}}
 \end{align*}
 
 \mysection{METODI DI VOTO}
