@@ -132,23 +132,25 @@ Poisson
         \(p=\frac{m}{N}\) & Percentuali di elementi difettosi nel lotto\\
         \(n\)             & Numerositá del campione estratto dal lotto\\
         \(c\)             & Numero massimo di elementi difettosi che possono essere presenti nel campione, numero di accettazione\\
-        \(\lambda\)       & \(np\)\\
+        \(\lambda\)       & \(np\) oppure \(un\), in generale sempre \(\mu n\)\\
+        \(I = Z_{1-\frac{\alpha}{2}}\sigma\) & Incertezza, Semiampiezza dell'intervallo di fiducia
     \end{tabularx}
 \end{center}
 
 \subsection*{Ipergeometrica}
 \begin{equation*}
-    P_a(N,n,c,p)=\sum_{i=0}^c\frac{\binom{N-Np}{n-i} \binom{Np}{i}}{\binom{N}{n}}
+    P_a(N,n,c,p)=\sum_{i=0}^c\frac{\binom{N-Np}{n-i} \binom{Np}{i}}{\binom{N}{n}}\\
 \end{equation*}
 
 \subsection*{Binomiale}
-Carta \textit{p} e carta \textit{np}
-\begin{equation*}
-    P_a(n,c,p)=\sum_{i=0}^c\binom{n}{i}p^i(1-p)^{n-i}
-\end{equation*}
+Carta \textit{p} e carta \textit{np} - Distribuzione usata per casi in cui si ha un risultato doppio si/no, bianco/nero etc.
+\begin{align*}
+    P_a(n,c,p)&=\sum_{i=0}^c\binom{n}{i}p^i(1-p)^{n-i}\\
+    I &= Z_{1-\frac{\alpha}{2}}\sqrt{\frac{p(1-p)}{n}}
+\end{align*}
 
 \subsection*{Poisson}
-Carta \textit{c} e carta \textit{u}
+Carta \textit{c} e carta \textit{u} - usata per eventi rari
 \begin{equation*}
     P_a(\lambda, c)=\sum_{i=0}^c\frac{\lambda^ie^{-\lambda}}{i!}
 \end{equation*}
@@ -158,10 +160,9 @@ Carta \textit{c} e carta \textit{u}
     \begin{tabular}{|c|c|}
         \hline
         \(N>10n\) & Ipergeometrica \(\rightarrow\) Binomiale\\\hline
-        \(p>0.1\) & Binomiale \(\rightarrow\) Poisson\\\hline
-        \(np \geq 5 \land  0.1<p<1\) & Binomiale \(\rightarrow\) Poisson\\\hline
-        \(np > 5 \land np(1-p)>5\) & Binomiale \(\rightarrow\) Normale\\\hline
-        \(\lambda > 10\) & Poisson \(\rightarrow\) Normale\\\hline
+        \(p<0.1\) & Binomiale \(\rightarrow\) Poisson\\\hline
+        \(np \geq 5 \land  0.1<p<0.9\) & Binomiale \(\rightarrow\) Normale\\\hline
+        \(\lambda > 15\) & Poisson \(\rightarrow\) Normale\\\hline
     \end{tabular}
 \end{center}
 
@@ -170,10 +171,10 @@ Carta \textit{c} e carta \textit{u}
 
 \mysection{PIANI DI CAMPIONAMENTO PER VARIABILI}
 \begin{align*}
-n&=\left(\frac{Z_\alpha+Z_\beta}{Z_{AQL}+Z_{LTPD}}\right)^2\overbracket{\boxed{\left(1+\frac{K^2}{2}\right)}}^{\text{se \(\sigma\) non nota}}\\
 K&=\frac{-\left(Z_\alpha Z_{LPTD} + Z_\beta Z_{AQL}\right)}{Z_\alpha+z_\beta}\\
-Z_{LSI} &= \frac{\overline{x}-LSI}{\sigma}\\
-P_a &= \phi \Bigg(\frac{\sqrt{n}(K + Z_p)}{{\underbracket{\boxed{\sqrt{1+\frac{k^2}{2}}}}_{\text{se \(\sigma\) non nota}}}}\Bigg)
+n&=\left(\frac{Z_\alpha+Z_\beta}{Z_{AQL}-Z_{LTPD}}\right)^2\overbracket{\boxed{\left(1+\frac{K^2}{2}\right)}}^{\text{se \(\sigma\) non nota}}\\
+P_a &= \phi \Bigg(\frac{-\sqrt{n}(K + Z_p)}{{\underbracket{\boxed{\sqrt{1+\frac{k^2}{2}}}}_{\text{se \(\sigma\) non nota}}}}\Bigg)\\
+Z_{LSI} &= \frac{\overline{x}-LSI}{\sigma}
 \end{align*}
 
 \subsection*{Metodo K}
@@ -185,7 +186,9 @@ P_a &= \phi \Bigg(\frac{\sqrt{n}(K + Z_p)}{{\underbracket{\boxed{\sqrt{1+\frac{k
 \begin{align*}
 Q_{LSI} &= Z_{LSI}\sqrt{\frac{n}{n-1}} \\
 \widehat{p} &=  \phi \left(-Q_{LSI}\right)\\
-M &= \phi\left(-K\sqrt{\frac{n}{n-1}}\right)
+M' &= \phi\left(-K\sqrt{\frac{n}{n-1}}\right)\\
+M'' &= \phi\left[\left(\frac{LSI-LSS}{\sigma}+k\right)\sqrt{\frac{n}{n-1}}\right]\\
+M = M' + M''\\
 \end{align*}
 \begin{equation*}
     \boxed{\widehat{p} < M}
@@ -214,7 +217,10 @@ M &= \phi\left(-K\sqrt{\frac{n}{n-1}}\right)
 \end{align*}
 
 \subsection*{Piano Singolo}
-
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.5\linewidth]{images/pianoSingolo.jpg}
+\end{figure}
 \begin{center}
     \begin{tabular}{ |c|c|c| }
         \hline
@@ -226,6 +232,10 @@ M &= \phi\left(-K\sqrt{\frac{n}{n-1}}\right)
 \end{center}
 
 \subsection*{Piano Doppio}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.5\linewidth]{images/pianoDoppio.jpg}
+\end{figure}
 \begin{center}
     \begin{tabular}{|c|c|c|}
         \hline
@@ -396,14 +406,14 @@ M &= \phi\left(-K\sqrt{\frac{n}{n-1}}\right)
 
 \mysection{SCALE}
 \begin{center}
-    \begin{tabularx}{\linewidth}{|c|c|X|}
+    \begin{tabularx}{\linewidth}{|c|c|X|c|}
         \hline
-       TRASFORMAZIONI & TIPOLOGIA & \multicolumn{1}{c|}{ESEMPI} \\\hline
-       \(\phi (x)=x\) & Assoluta & conteggi\\\hline
-       \makecell{Similitudine \\ \(\phi (x)=\alpha x\)} & Rapporto & massa, temperatura in kelvin, tempo, suono, lucentezza\\\hline
-       \makecell{Lineare \\ \(\phi (x)=\alpha x + \beta\)} & Intervallo & temperatura, calendario\\\hline
-       \(x \geq y \Leftrightarrow \phi(x)\geq\phi(y)\) & Ordinale & classifiche, qualitá dell'aria, durezza\\\hline
-       Qualsiasi a uno a uno & Nominale & maglie giocatori, colore occhi\\\hline
+       TRASFORMAZIONI & TIPOLOGIA & \multicolumn{1}{c|}{ESEMPI} & test \\\hline
+       \(\phi (x)=x\) & Assoluta & conteggi & \\\hline
+       \makecell{Similitudine \\ \(\phi (x)=\alpha x\)} & Rapporto & massa, temperatura in kelvin, tempo, suono, lucentezza & \\\hline
+       \makecell{Lineare \\ \(\phi (x)=\alpha x + \beta\)} & Intervallo & temperatura, calendario & t, F\\\hline
+       \(x \geq y \Leftrightarrow \phi(x)\geq\phi(y)\) & Ordinale & classifiche, qualitá dell'aria, durezza & segno\\\hline
+       Qualsiasi a uno a uno & Nominale & maglie giocatori, colore occhi & \(\chi ^2\)\\\hline
     \end{tabularx}
 \end{center}
 
@@ -431,12 +441,19 @@ M &= \phi\left(-K\sqrt{\frac{n}{n-1}}\right)
     C_p&=\frac{LSS-LSI}{6\sigma_p} \boxed{> 1.33}
 \end{align*}
 
-\subsection*{Indice \(\mathbf{C_p}\)}
+\subsection*{Indice \(\mathbf{C_{pk}}\)}
 
 \begin{align*}
     C_{pi}&=\frac{\mu-LSI}{3\sigma_p} \boxed{> 1.25}\\
     C_{ps}&=\frac{LSS-\mu}{3\sigma_p} \boxed{> 1.25}\\
     C_{pk}&=min(C_{pi},C_{ps}) \boxed{> 1.33}
+\end{align*}
+
+\subsection*{Difettositá}
+
+\begin{align*}
+    p &= \phi(-3C_{pi})+\phi(-3C_{ps})\\
+    p &= 2\phi(-6C_{p}+3C_{pk})
 \end{align*}
 
 \mysection{GEOMETRIA}
